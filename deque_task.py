@@ -2,7 +2,7 @@ from collections import deque
 
 
 def check_palindrome(input_string: str):
-    normalized_string = input_string.casefold()
+    normalized_string = input_string.casefold().replace(" ", "")
 
     char_deque = deque()
 
@@ -16,5 +16,5 @@ def check_palindrome(input_string: str):
     return True
 
 
-for word in ["Radar", "hello", "level", "saaS"]:
+for word in ["Radar", "hello", "level", "saaS", 'level l evel']:
     print(f"{word}: {check_palindrome(word)}")
